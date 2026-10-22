@@ -5,10 +5,10 @@ from pathlib import Path
 
 import requests
 
-PNR = os.environ["PNR"]
-API_KEY = os.environ["RAILKIT_API_KEY"]
-BOT_TOKEN = os.environ["TELEGRAM_BOT_TOKEN"]
-CHAT_ID = os.environ["TELEGRAM_CHAT_ID"]
+PNR = os.environ["PNR"].strip()
+API_KEY = os.environ["RAILKIT_API_KEY"].strip()
+BOT_TOKEN = os.environ["TELEGRAM_BOT_TOKEN"].strip()
+CHAT_ID = os.environ["TELEGRAM_CHAT_ID"].strip()
 STATE_FILE = Path("state.json")
 
 session = requests.Session()
